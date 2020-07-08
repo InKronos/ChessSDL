@@ -301,14 +301,14 @@ void ChangePos(int x, int y, Figure board[8][8], Game *game)
 
 void UpdatePawn(int x, int y, Figure board[8][8], Game* game) {
 	Type updateType = None;
-	if (x > 250 && x < 750) { //wyszukanie pozycji napisu
-		if (y > 275 && y < 350)
+	if (x > 250 && x < 750) { //wyszukanie pozycji napisu przedzia造 dla osi x
+		if (y > 275 && y < 350) // przedzia造 osi y dla wyboru Hetmana
 			updateType = Queen;
-		else if (y > 350 && y < 415)
+		else if (y > 350 && y < 415) // przedzia造 osi y dla wyboru go鎍a 
 			updateType = Bishop;
-		else if (y > 415 && y < 480)
+		else if (y > 415 && y < 480) // przedzia造 osi y dla wyboru konia
 			updateType = Knight;
-		else if (y > 480 && y < 560)
+		else if (y > 480 && y < 560) // przedzia造 osi y dla wyboru wie篡
 			updateType = Rook;
 		else
 			return;

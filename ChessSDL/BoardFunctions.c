@@ -39,7 +39,7 @@ void CreateBoard(Figure board[8][8]) {
 	board[7][3] = queen1;
 	//wype³ninie tablicy "pustymi" figurami
 	for (int i = 2; i < 6; i++) {
-		for (int j = 0; j < 7; j++) {
+		for (int j = 0; j < 8; j++) {
 			Figure blank = { 0, 0, 0, 0, 0 };
 			board[i][j] = blank;
 		}
@@ -68,9 +68,15 @@ void FillBoard(int board[8][8]) {
 
 void GetPos(int* x, int* y)
 {
-	double floatx = ((*x) - 100) / 100;
+	double floatx = *x - 100;
 	double floaty = (*y) / 100;
-	int newX = (int)floor(floatx);
+	int newX;	
+	if (floatx < 0) 
+		newX = -1;
+	else {
+		floatx /= 100;
+		newX = (int)floor(floatx);
+	}
 	int newY = (int)floor(floaty);
 	*x = newY; //oœ Y jest pierwszym wymiarem w tablicy dwuwymiarowej
 	*y = newX; //oœ X jest drugim wymiarem w tablicy dwuwymiarowej

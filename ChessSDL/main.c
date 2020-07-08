@@ -42,20 +42,24 @@ int main()
 					
 					if (game->state == WaitingForAction) {
 						GetPos(&x, &y);
-						FindPos(x, y, BoardOfFigures, boardLook, game);
+						if(y < 8 && y >= 0)
+							FindPos(x, y, BoardOfFigures, boardLook, game);
 					}	
 					else if (game->state == WaitingForMove) {
 						GetPos(&x, &y);
-						if (boardLook[x][y] == 2 || boardLook[x][y] == 3)
-							ChangePos(x, y, BoardOfFigures, game);
-						else
-							MakeFiguresUnready(BoardOfFigures); //Jeœli nic nie wybraliœmy figury nie powinny byæ gotowe do ruchu
+						if (y < 8 && y >= 0) {
+							if (boardLook[x][y] == 2 || boardLook[x][y] == 3)
+								ChangePos(x, y, BoardOfFigures, game);
+							else
+								MakeFiguresUnready(BoardOfFigures); //Jeœli nic nie wybraliœmy figury nie powinny byæ gotowe do ruchu
+						}
 						if (game->state == WaitingForMove)
 							game->state = WaitingForAction;
 						FillBoard(boardLook);
 					}
 					else if (game->state == EndOfTheGame) {
-						if(x > 250 && x < 750 && y > 200 && y < 250)
+						int minXToRestart = 250, maxXToRestart = 750, minYToRestart = 200, maxYToRestart = 250;
+						if(x > minXToRestart && x < maxXToRestart && y > minYToRestart && y < maxYToRestart)
 							initialisation(boardLook, BoardOfFigures, game); //Jeœli chcemy powtórzyæ gre
 						else
 							break;

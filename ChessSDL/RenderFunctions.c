@@ -149,7 +149,7 @@ void RenderEndOfTheGame(SDL_Renderer* renderer, SDL_Texture* arrayOfTextures[9],
 	SDL_RenderFillRect(renderer, &rect);
 	SDL_Rect rect1 = { 250, 200, 500, 50 };
 	SDL_RenderCopy(renderer, arrayOfTextures[8], NULL, &rect1);
-	if(!game->player)
+	if(game->player)
 		SDL_RenderCopy(renderer, arrayOfTextures[4], NULL, &rect);
 	else
 		SDL_RenderCopy(renderer, arrayOfTextures[5], NULL, &rect);
