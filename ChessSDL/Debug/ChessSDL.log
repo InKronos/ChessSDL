@@ -1,3 +1,8 @@
-﻿  main.c
+﻿  game.c
+  main.c
 C:\Users\i15pi\source\repos\ChessSDL\ChessSDL\main.c(8,1): warning C4026: function declared with formal parameter list
+  MovOfFigures.c
+  BoardFunctions.c
+  RenderFunctions.c
+  Generating Code...
   ChessSDL.vcxproj -> C:\Users\i15pi\source\repos\ChessSDL\Debug\ChessSDL.exe

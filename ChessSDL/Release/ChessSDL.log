@@ -1,0 +1,10 @@
+﻿  game.c
+C:\Users\i15pi\source\repos\ChessSDL\ChessSDL\stdafx.h(9,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  main.c
+C:\Users\i15pi\source\repos\ChessSDL\ChessSDL\stdafx.h(9,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  MovOfFigures.c
+C:\Users\i15pi\source\repos\ChessSDL\ChessSDL\stdafx.h(9,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  BoardFunctions.c
+C:\Users\i15pi\source\repos\ChessSDL\ChessSDL\stdafx.h(9,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  RenderFunctions.c
+C:\Users\i15pi\source\repos\ChessSDL\ChessSDL\stdafx.h(9,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
